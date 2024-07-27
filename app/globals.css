@@ -1,33 +1,269 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+  ========================================
+  $Globals
+  ========================================
+*/
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* 1...............................Base */
+/* 2.........................Typography */
+/* 3..............................Theme */
+/* 4.............................Layout */
+/* 5...........................404 page */
+
+/*
+  ========================================
+  $Base
+  ========================================
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html,
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  all: unset;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+img::before,
+img::after {
+  position: relative;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  text-align: center;
+  font: inherit;
+  font-style: italic;
+}
+
+img::before {
+  content: "We're sorry, the image below is broken :(";
+}
+
+img::after {
+  content: "(url: " attr(src) ")";
+}
+
+/*
+  ========================================
+  $Typography
+  ========================================
+*/
+
+:root {
+  --f-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --f-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --f-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --f-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --f-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --f-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --f-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: var(--f-base);
+  line-height: 1.5;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+h1 {
+  font-size: var(--f-xl);
+}
+
+h2 {
+  font-size: var(--f-lg);
+}
+
+h3 {
+  font-size: var(--f-md);
+}
+
+p {
+  font-size: var(--f-base);
+}
+
+/*
+  ========================================
+  $Theme
+  ========================================
+*/
+
+:root {
+  --background: #fff; /* light: background */
+  --foreground: #212121; /* light: text */
+  --background--grey: #fafafa;
+  --foreground--grey: #424242;
+  --background--black: #121212;
+  --foreground--black: #c9c9c9;
+  --accent: #56bf8e;
+}
+
+/* theme--light */
+body,
+.theme--main,
+.theme--dark .Work_cta_code__VmFI3 {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.theme--dark,
+.theme--anthracite {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
+.theme--grey {
+  background-color: var(--background--grey);
+  color: var(--foreground--grey);
+  font-size: var(--f-sm);
+}
+
+.theme--dark .theme--main,
+.theme--dark .theme--grey {
+  background-color: var(--background--black);
+  color: var(--foreground--black);
+}
+
+.theme--dark .Work_cta_code__VmFI3:hover {
+  color: var(--background);
+}
+
+.theme--dark .Work_tag__wuazO {
+  color: var(--foreground--black);
+}
+
+.moon {
+  cursor: pointer;
+  background-color: var(--background);
+  -webkit-mask-image: url("../public/icons/moon.svg");
+  mask-image: url("../public/icons/moon.svg");
+  width: 35px;
+  height: 35px;
+}
+
+.moon:hover {
+  background-color: var(--accent);
+}
+
+.theme--dark .moon {
+  -webkit-mask-image: url("../public/icons/moonFilled.svg");
+  mask-image: url("../public/icons/moonFilled.svg");
+}
+
+strong {
+  font-weight: normal;
+  color: var(--accent);
+}
+
+.accent,
+*::selection {
+  color: var(--accent);
+}
+
+/*
+  ========================================
+  $Layout
+  ========================================
+*/
+
+:root {
+  --screen: 1200px;
+  --padding-l: 4rem; /* sections */
+  --padding-m: 3rem; /* mobile top - bottom */
+  --padding-s: 2rem; /* header - footer */
+  --padding-xs: 1rem; /* between text */
+  --padding-xxs: 0.5rem; /* between text */
+}
+
+/* section = background */
+/* div = container */
+.screen {
+  max-width: var(--screen);
+  margin: 0 auto;
+  padding: var(--padding-m) var(--padding-s);
+}
+
+.flex--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+  max-width: 100%;
+  gap: var(--padding-s);
+  grid-template-columns: 1fr;
+}
+
+@media screen and (width > 768px) {
+  .screen {
+    padding: var(--padding-l) var(--padding-s);
   }
+  .grid {
+    grid-template-columns: repeat(2, minmax(45%, auto));
+  }
+}
+
+@media screen and (width > 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(30%, auto));
+  }
+}
+
+/*
+  ========================================
+  $404 page
+  ========================================
+*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.link {
+  display: inline-block;
+  margin-top: var(--padding-s);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid currentColor;
+}
+
+.link:hover {
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
 }

@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+}
+
+.list li:not(:first-child) {
+  margin-left: var(--padding-xs);
+}
+
+.link {
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(1);
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background: currentcolor;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .link:hover::after {
+    transform: scaleX(0);
+    transform-origin: bottom left;
+  }
+}

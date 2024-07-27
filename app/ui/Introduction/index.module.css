@@ -1,0 +1,4 @@
+.content {
+  max-width: 65ch;
+  margin: var(--padding-s) 0;
+}

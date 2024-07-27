@@ -1,0 +1,6 @@
+.section {
+}
+
+.section h2 {
+  padding-bottom: var(--padding-s);
+}
