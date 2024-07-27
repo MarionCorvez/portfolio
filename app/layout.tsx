@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: "Marion Corvez | Portfolio",
   description:
     "Discover Marion Corvez's profile, from product manager to front-end developer, as well as digital trainer",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
