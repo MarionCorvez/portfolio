@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./index.module.css";
+import Switchmode from "@/app/ui/Switchmode";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
             Available in <strong>September, 2024</strong>
           </p>
         </div>
+        <Switchmode />
       </div>
     </header>
   );

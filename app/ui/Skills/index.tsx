@@ -15,7 +15,6 @@ export default function Skills() {
                   <Icon
                     name={skill}
                     className={styles.card_icon}
-                    title={skill}
                     aria-label={skill}
                     role="img"
                   />

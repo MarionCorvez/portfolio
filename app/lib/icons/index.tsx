@@ -44,7 +44,6 @@ const ICONS: { [key: string]: any } = {
 type Props = {
   name: keyof typeof ICONS;
   size?: 16 | 24 | 32 | 48;
-  title: string;
 } & SVGProps<SVGSVGElement>;
 
 export const Icon = ({ name, size = 32, ...rest }: Props) => {
