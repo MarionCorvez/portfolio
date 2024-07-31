@@ -53,7 +53,6 @@ const skills = [
   "Squarespace",
   "Figma",
   "Adobe XD",
-  "Asana",
   "Notion",
   "Slack",
   "Git",
