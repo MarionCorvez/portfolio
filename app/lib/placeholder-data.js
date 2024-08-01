@@ -60,7 +60,20 @@ const skills = [
   "Swagger",
 ];
 
-const experience = ["HTML5"];
+const experience = {
+  studies: [
+    "2024 (WIP): RNCP level 5 in Front-end Development",
+    "2007: Master in Medias & Communication",
+    "2006: Master in Literature",
+  ],
+  positions: [
+    "2022 - now: Design & Development of web applications",
+    "2017 - 2021: New Media & Communication Teacher",
+    "2007 - 2016: Digital Product Manager",
+  ],
+  clients:
+    "Arianespace, Danone, Dassault Systèmes, La Mutualité Française, Le Conservateur, Le Monde, LVMH, PSA Group, Splendia, SFR, SNCF, Ubisoft, Viparis",
+};
 
 module.exports = {
   works,
