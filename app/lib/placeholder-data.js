@@ -1,3 +1,21 @@
+const contacts = [
+  {
+    title: "Email",
+    link: "mailto:marion.corvez@gmail.com",
+    description: "Send me an email, open webmail",
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/MarionCorvez",
+    description: "Visit my GitHub account, new window",
+  },
+  {
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/in/marioncorvez/",
+    description: "Visit my LinkedIn page, new window",
+  },
+];
+
 const works = [
   {
     id: "e3ab19975640",
@@ -76,6 +94,7 @@ const experience = {
 };
 
 module.exports = {
+  contacts,
   works,
   skills,
   experience,
