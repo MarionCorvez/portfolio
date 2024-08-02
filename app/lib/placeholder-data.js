@@ -32,7 +32,7 @@ const works = [
     id: "5b619fe57baa",
     title: "Sophie Bluel",
     description:
-      "The project is built with Node.js and consists of creating the portfolio of Sophie Bluel, an interior designer, and presenting her projects filtered by categories. With an admin access, the architect must be able to manage her work: add, modify or delete it.",
+      "Built with Node.js, this project consists in creating the portfolio of Sophie Bluel, an interior designer, and presenting her projects filtered by categories. With an admin access, the architect must be able to add, modify or delete her work.",
     image: "/works/sophie-bluel.webp",
     tags: ["sass", "javascript"],
     code: "https://github.com/MarionCorvez/sophie-bluel",
@@ -68,7 +68,7 @@ const experience = {
   ],
   positions: [
     "2022 - now: Design & Development of web applications",
-    "2017 - 2021: New Media & Communication Teacher",
+    "2017 - 2021: New Media Teacher",
     "2007 - 2016: Digital Product Manager",
   ],
   clients:
