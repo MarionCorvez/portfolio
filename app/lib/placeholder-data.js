@@ -40,7 +40,7 @@ const works = [
     id: "e14d1943f464",
     title: "Kasa",
     description:
-      "Kasa, a peer-to-peer apartment rental company, wants to create a complete web application with React. Each accommodation must contain a slider and information about the location such as location, host name and picture, rating, amenities, etc.",
+      "Kasa, a peer-to-peer apartment rental company, wants to create a complete web application with React. Each page must contain a slider and information about the accommodation such as location, host name and picture, rating, amenities, etc.",
     image: "/works/kasa.webp",
     tags: ["sass", "javascript", "react"],
     code: "https://github.com/MarionCorvez/kasa",
