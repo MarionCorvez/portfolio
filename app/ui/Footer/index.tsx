@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="theme--anthracite">
       <div className={`${styles.container} flex--center screen`}>
-        <span>© {new Date().getFullYear()} - Marion Corvez</span>
+        <span>© 2024 - {new Date().getFullYear()} Marion Corvez</span>
         <Contact />
         <a
           href="https://www.ecoindex.fr/en/result/?id=1cea285d-5c1a-42f2-b190-9e2bddb368c9"
